@@ -5,45 +5,25 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 150%;
-}
-
-
-
-header {
-    background-color: black;
-    color: white;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+    font-size: 120%;
 }
 
 header nav ul {
-    list-style: none;
-    display: flex;
-}
+    justify-content: center;
+} 
 
-header nav ul li a {
-    padding: 8px 12px;
-    margin: 0 10px;
+header nav ul li {
     font-size: 20px;
-    border-radius: 20px;
+    padding: 0 8px;
+    margin: 0 10px;
+    border-radius: 15px;    
     background-color: rgba(255,255,255,0.2);
     font-weight: bold;
-    text-decoration: none;
-    color: white;
 }
 
 header nav ul li:hover {
     transform: scale(0.8);
     transition: all, 0.5s;
-}
-
-header span {
-    display: none;
 }
 
 .container-area {
@@ -69,7 +49,7 @@ aside {
 }
 
 .hero { 
-    background-image: url('./img/5065282.jpg');
+    background-image: url('../img/5065282.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -88,6 +68,7 @@ aside {
     justify-content: center;
     justify-items: center;
     margin-top: 15px;
+    font-size: 18px;
 }    
 
 .hero__buttom--pointer {
@@ -99,8 +80,9 @@ aside {
     background-color: black;
 }
 
+
 .service { 
-    height: 500px;
+    height: 350px;
     color: white;
     display: grid;
     
@@ -113,14 +95,14 @@ aside {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
-    align-items: center;
     margin-top: 15px;
     
 }
 
-.service__text {
-    margin-top: 15px;
+.service__title {
+    margin-top: 20px;
     text-align: center;
+    color: white;
 }
 
 /*BOX MODEL*/
@@ -135,9 +117,18 @@ aside {
     height: 200px;
     cursor: pointer;
     margin-bottom: 50px;
+    color: white;
+    font-size: 24px;
 }
 
-div span:hover {
+section div {
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 50px;
+}
+
+div article:hover {
     border-radius: 10px;
     width: 190px;
     height: 190px;
@@ -147,15 +138,59 @@ div span:hover {
     transition: all, 1s;
 }
 
-.empeza { 
-    height: 200px;
+.info { 
+    height: 400px;
     color: black;
-    background-color: silver;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    /* grid-template-areas: "boton texto texto";*/
+    grid-template-columns: repeat(2, 1fr); 
+    justify-items: center;
     align-items: center;
     padding: 0 50px;
+    background-color: silver;
+
+}
+
+.info__item--big {
+    /*inicia fila. inicia columna, termina fila, termina columna */
+    grid-area: 1 / 1 / 2 / 2; 
+    /* place-self: center; */
+
+    background-image: linear-gradient(45deg, #406882, #b1d0e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.info-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__title {
+    margin-top: 20px;
+}
+
+.info__buttom {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 15px;
+    font-size: 18px;
+
+}    
+
+.hero__buttom--pointer {
+    padding: 10px 50px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
 }
 
 footer { 
@@ -180,7 +215,47 @@ footer div p a {
     color: rgb(22, 98, 121);
 }
 
+/* div form {
+    animation: move 5s infinite linear;
+}
+
+div form:hover {
+    animation: none;
+} */
+
+@keyframes move {
+    from {
+        transform: rotateY();
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
 /*ESTRATEGIA MOBILE LAST*/
+
+@media (max-width: 1180px) {
+
+    .lista1 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 1048px) {
+    header nav div span {
+        display: none;
+    }
+
+    .hero__buttom {
+        font-size: 15px;
+    }
+
+    .info__buttom {
+        font-size: 15px; 
+    }
+}
 
 @media (max-width: 967px) {
     body {
@@ -212,6 +287,7 @@ footer div p a {
         height: 150px;
         cursor: pointer;
         font-size: 15px;
+
     }
 
     div span:hover {
@@ -225,6 +301,7 @@ footer div p a {
     }
 
 }
+
 @media (max-width: 799px) {
 
     body {
@@ -250,14 +327,14 @@ footer div p a {
         width: 100px;
         height: 100px;
         cursor: pointer;
-        font-size: 15px;
+        font-size: 12px;
     }
 
     div span:hover {
         width: 95px;
         height: 95px;
     }
-    
+
     section span p {
         margin-left: 20px;
         font-size: 15px;
@@ -267,9 +344,7 @@ footer div p a {
 
 @media (max-width: 520px) {
 
-    .hero {
-        text-align: center;
-    }
+  
     .service-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -278,17 +353,34 @@ footer div p a {
         
     }
 
-    section p {
-        margin-top: -90px;
-        font-size: 15px;
+    .info { 
+        height: 400px;
+        grid-template-columns: repeat(1, 1fr); 
+        justify-items: center;
+        align-items: center;
+        padding: 0 50px;
+        background-color: silver;
+    
     }
 
-    section div h2 {
-        text-align: center;
+    section span p {
+        margin-top: -50px;
+        font-size: 15px;
     }
 
     footer p {
         font-size: 10px;
     }
 
+}
+
+@media (max-width: 370px) {
+    .info {
+        height: 500px;
+        align-items: center;
+        text-align: center;
+
+    }
+
+   
 }
