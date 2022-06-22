@@ -2,50 +2,25 @@
     margin: 0;
     padding: 0;
 }
-
-body {
+.body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 150%;
 }
-
-
-
-header {
-    background-color: black;
-    color: white;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-}
-
-header nav ul li a {
-    padding: 8px 12px;
-    margin: 0 10px;
+.header nav ul {
+    justify-content: center;
+} 
+.lista1 {
     font-size: 20px;
-    border-radius: 20px;
+    padding: 0 8px;
+    margin: 0 10px;
+    border-radius: 15px;    
     background-color: rgba(255,255,255,0.2);
     font-weight: bold;
-    text-decoration: none;
-    color: white;
 }
-
-header nav ul li:hover {
+.header nav ul li:hover {
     transform: scale(0.8);
     transition: all, 0.5s;
 }
-
-header span {
-    display: none;
-}
-
 .container-area {
     display: grid;
     gap: 15px;
@@ -59,17 +34,14 @@ header span {
 
     align-items: center;
 }
-
-nav {
+.nav {
     grid-area: lista;
 }
-
-aside {
+.aside {
     grid-area: logo;
 }
-
 .hero { 
-    background-image: url('../img/5065282.jpg');
+    background-image: url('./img/5065282.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -81,19 +53,14 @@ aside {
     align-items: center;
     padding: 0 50px;
 }
-
-.hero__title-proyect {
-    font-size: 50px;
-}
-
 .hero__buttom {
     display: flex;
     text-align: center;
     justify-content: center;
     justify-items: center;
     margin-top: 15px;
+    font-size: 18px;
 }    
-
 .hero__buttom--pointer {
     padding: 10px 50px;
     cursor: pointer;
@@ -102,31 +69,34 @@ aside {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: black;
 }
-
-.proyect {
-    height: 550px;
+.mision { 
+    height: 350px;
     color: white;
-    padding: 0 50px;
-    background-color: rgb(22, 98, 121);    
-
-}
-
-.proyect-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin: 0 auto;
+    padding: 0 50px;
+    background-color: rgb(22, 98, 121);
+}
+.div article h3 {
+    margin-top: 30px;
+    text-align: center;
+}
+.div article p {
+    display: grid;
+    font-size: 16px;
+    margin: 50px 20px;
     justify-items: center;
 }
-
-.proyect__item {
-    margin-top: 40px;
-    width: 300px;
-    height: 120px;
-    cursor: pointer;
+.mision-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    margin-top: 15px;
 }
-
-.empeza { 
+.mision-grid__text {
+    font-size: 16px;
+    margin: 0 40px;
+}
+.contacto { 
     height: 200px;
     color: black;
     background-color: silver;
@@ -136,8 +106,10 @@ aside {
     align-items: center;
     padding: 0 50px;
 }
-
-footer { 
+.contacto-grid__text {
+    text-align: center;
+}
+.footer { 
     font-size: 80%;
     color: white;
     background-color: black;
@@ -146,21 +118,48 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 0 50px;
-
 }
-
-footer img {
+.footer img {
     margin-top: -20px;
     margin-bottom: -40px;
 }
-
-footer div p a {
+.footer div p a {
     text-decoration: none;
     color: rgb(22, 98, 121);
 }
 
 /*ESTRATEGIA MOBILE LAST*/
+@media (max-width: 1180px) {
 
+    .lista1 {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+div article:hover {
+
+    background-image: linear-gradient(to top, rgb(22, 98, 121), black, rgb(22, 98, 121));
+    transition: all, 2s;
+}
+@media (max-width: 1048px) {
+    header nav div span {
+        display: none;
+    }
+
+    .hero__buttom {
+        font-size: 15px;
+    }
+
+    .info__buttom {
+        font-size: 15px; 
+    }
+}
+@media (max-width: 991px) {
+    .mision { 
+        height: 700px;
+    
+    }
+}
 @media (max-width: 967px) {
     body {
         font-size: 120%;
@@ -180,7 +179,6 @@ footer div p a {
         text-decoration: none;
         color: white;
     }
-    
 
     footer { 
         font-size: 20px;
@@ -188,7 +186,6 @@ footer div p a {
     }
 
 }
-
 @media (max-width: 799px) {
 
     body {
@@ -207,70 +204,49 @@ footer div p a {
         display: flex;    
     }
 
-    .proyect-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        gap: -10px;
-        margin: 0 auto;
-
-    }
-
-    .proyect__item {
-        margin-top: 40px;
-        width: 250px;
-        height: 100px;
-        cursor: pointer;
-    }
-
-    section span p {
-        margin-left: 20px;
-        font-size: 15px;
+    .mision {
+        height: 800px;
     }
 
 }
-
 @media (max-width: 600px) {
 
     .hero {
-        font-size: 16px;
+        text-align: center;
     }
-
-    .hero__title-proyect {
-        font-size: 30px;
-    }
-
-    .service-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        margin-top: 15px;
-        
-    }
-
-    .proyect {
-        height: 120%;
-    }
-    .proyect-grid {
+  
+    .mision {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    .proyect__item {
-        margin-top: 20px;
-        width: 220px;
-        height: 80px;
-        cursor: pointer;
-    }
-
-    section span p {
-        margin-top: -50px;
-        font-size: 15px;
+        height: 850px;
     }
 
     footer p {
         font-size: 10px;
     }
 
+}
+@media (max-width: 505px) {
+
+    section div p {
+        font-size: 15px;
+    }
+
+    .mision {
+        height: 1000px;
+    }
+
+    section div span {
+        font-size: 10px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
 
 }
+@media (max-width: 400px) {
 
+    .mision {
+        height: 1300px;
+    }
+}
