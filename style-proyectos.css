@@ -69,7 +69,7 @@ aside {
 }
 
 .hero { 
-    background-image: url('../img/5065282.jpg');
+    background-image: url('./img/5065282.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -80,6 +80,10 @@ aside {
     justify-content: center;
     align-items: center;
     padding: 0 50px;
+}
+
+.hero__title-proyect {
+    font-size: 50px;
 }
 
 .hero__buttom {
@@ -99,52 +103,27 @@ aside {
     background-color: black;
 }
 
-.service { 
-    height: 500px;
+.proyect {
+    height: 550px;
     color: white;
-    display: grid;
-    
     padding: 0 50px;
-    background-color: rgb(22, 98, 121);
+    background-color: rgb(22, 98, 121);    
 
 }
 
-.service-grid {
+.proyect-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 0 auto;
     justify-items: center;
-    align-items: center;
-    margin-top: 15px;
-    
 }
 
-.service__text {
-    margin-top: 15px;
-    text-align: center;
-}
-
-/*BOX MODEL*/
-.boxModel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    text-align: center;
-    vertical-align: middle;
-    width: 200px;
-    height: 200px;
+.proyect__item {
+    margin-top: 40px;
+    width: 300px;
+    height: 120px;
     cursor: pointer;
-    margin-bottom: 50px;
-}
-
-div span:hover {
-    border-radius: 10px;
-    width: 190px;
-    height: 190px;
-    border-color: darkcyan;
-    border-style: outset;
-    background-color: darkcyan;
-    transition: all, 1s;
 }
 
 .empeza { 
@@ -202,22 +181,6 @@ footer div p a {
         color: white;
     }
     
-   
-    /*BOX MODEL*/
-    .boxModel {
-        background-color: black;
-        text-align: center;
-        vertical-align: middle;
-        width: 150px;
-        height: 150px;
-        cursor: pointer;
-        font-size: 15px;
-    }
-
-    div span:hover {
-        width: 145px;
-        height: 145px;
-    }
 
     footer { 
         font-size: 20px;
@@ -225,6 +188,7 @@ footer div p a {
     }
 
 }
+
 @media (max-width: 799px) {
 
     body {
@@ -243,21 +207,22 @@ footer div p a {
         display: flex;    
     }
 
-    .boxModel {
-        background-color: black;
-        text-align: center;
-        vertical-align: middle;
-        width: 100px;
-        height: 100px;
-        cursor: pointer;
-        font-size: 15px;
+    .proyect-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: -10px;
+        margin: 0 auto;
+
     }
 
-    div span:hover {
-        width: 95px;
-        height: 95px;
+    .proyect__item {
+        margin-top: 40px;
+        width: 250px;
+        height: 100px;
+        cursor: pointer;
     }
-    
+
     section span p {
         margin-left: 20px;
         font-size: 15px;
@@ -265,11 +230,16 @@ footer div p a {
 
 }
 
-@media (max-width: 520px) {
+@media (max-width: 600px) {
 
     .hero {
-        text-align: center;
+        font-size: 16px;
     }
+
+    .hero__title-proyect {
+        font-size: 30px;
+    }
+
     .service-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -278,17 +248,29 @@ footer div p a {
         
     }
 
-    section p {
-        margin-top: -90px;
-        font-size: 15px;
+    .proyect {
+        height: 120%;
+    }
+    .proyect-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 
-    section div h2 {
-        text-align: center;
+    .proyect__item {
+        margin-top: 20px;
+        width: 220px;
+        height: 80px;
+        cursor: pointer;
+    }
+
+    section span p {
+        margin-top: -50px;
+        font-size: 15px;
     }
 
     footer p {
         font-size: 10px;
     }
 
+
 }
+
