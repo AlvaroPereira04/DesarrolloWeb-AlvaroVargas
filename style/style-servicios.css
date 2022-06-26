@@ -1,85 +1,89 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 150%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px
 }
 
-
-
-header {
-    background-color: black;
-    color: white;
+.btn-contacto {
+    background-color: #000
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+.btn-quienes {
+    background-color: gray
 }
 
 header nav ul {
-    list-style: none;
-    display: flex;
+    justify-content: center
 }
 
-header nav ul li a {
-    padding: 8px 12px;
-    margin: 0 10px;
+header nav ul li {
     font-size: 20px;
-    border-radius: 20px;
-    background-color: rgba(255,255,255,0.2);
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
+    padding: 0 8px;
+    margin: 0 10px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, .2);
+    font-weight: bold
 }
 
 header nav ul li:hover {
     transform: scale(0.8);
-    transition: all, 0.5s;
+    transition: all, .5s
 }
 
-header span {
-    display: none;
+footer {
+    font-size: 80%;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px
+}
+
+footer img {
+    margin-top: -20px;
+    margin-bottom: -40px
+}
+
+footer div p a {
+    text-decoration: none;
+    color: #166279
 }
 
 .container-area {
     display: grid;
     gap: 15px;
-    
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 1fr;
-
-    grid-template-areas: 
-        "logo lista lista lista" /*son nombre*/
-        ;
-
-    align-items: center;
+    grid-template-areas: "logo lista lista lista";
+    align-items: center
 }
 
 nav {
-    grid-area: lista;
+    grid-area: lista
 }
 
 aside {
-    grid-area: logo;
+    grid-area: logo
 }
 
-.hero { 
-    background-image: url('../img/5065282.jpg');
+.hero {
+    background-image: url("../img/5065282.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 300px;
-    color: white;
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 50px
 }
 
 .hero__buttom {
@@ -88,207 +92,284 @@ aside {
     justify-content: center;
     justify-items: center;
     margin-top: 15px;
-}    
+    font-size: 18px
+}
 
 .hero__buttom--pointer {
     padding: 10px 50px;
     cursor: pointer;
-    color: white;
+    color: #fff;
     font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: black;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000
 }
 
-.service { 
-    height: 500px;
-    color: white;
+.service {
+    height: 350px;
+    color: #fff;
     display: grid;
-    
-    padding: 0 50px;
-    background-color: rgb(22, 98, 121);
-
+    padding: 30px 50px;
+    background-color: #166279
 }
 
 .service-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
-    align-items: center;
-    margin-top: 15px;
-    
+    margin-top: 15px
 }
 
-.service__text {
-    margin-top: 15px;
+.service__title {
+    margin-top: 20px;
     text-align: center;
+    color: #fff
 }
 
-/*BOX MODEL*/
 .boxModel {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: #000;
     text-align: center;
     vertical-align: middle;
     width: 200px;
     height: 200px;
     cursor: pointer;
     margin-bottom: 50px;
+    color: #fff;
+    font-size: 24px
 }
 
-div span:hover {
+section div {
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 50px
+}
+
+div article:hover {
     border-radius: 10px;
     width: 190px;
     height: 190px;
-    border-color: darkcyan;
+    border-color: #008b8b;
     border-style: outset;
-    background-color: darkcyan;
-    transition: all, 1s;
+    background-color: #008b8b;
+    transition: all, 1s
 }
 
-.empeza { 
+.info {
+    height: 400px;
+    color: #000;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 0 50px;
+    background-color: silver
+}
+
+.info__item--big {
+    grid-area: 1/1/2/2;
+    background-image: linear-gradient(45deg, #406882, #b1d0e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff
+}
+
+.info-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center
+}
+
+.info__title {
+    margin-top: 20px
+}
+
+.info__buttom {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 15px;
+    font-size: 18px
+}
+
+.hero__buttom--pointer {
+    padding: 10px 50px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000
+}
+
+.contacto {
     height: 200px;
-    color: black;
+    color: #000;
     background-color: silver;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 50px
 }
 
-footer { 
-    font-size: 80%;
-    color: white;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 50px;
-
+.contacto-grid__text {
+    text-align: center
 }
 
-footer img {
-    margin-top: -20px;
-    margin-bottom: -40px;
+@keyframes move {
+    from {
+        transform: rotateY()
+    }
+
+    to {
+        transform: rotateY(360deg)
+    }
 }
 
-footer div p a {
-    text-decoration: none;
-    color: rgb(22, 98, 121);
+@media(max-width: 1180px) {
+    .lista1 {
+        font-size: 15px;
+        text-align: center
+    }
 }
 
-/*ESTRATEGIA MOBILE LAST*/
+@media(max-width: 1048px) {
+    header nav div span {
+        display: none
+    }
 
-@media (max-width: 967px) {
+    .hero__buttom {
+        font-size: 15px
+    }
+
+    .info__buttom {
+        font-size: 15px
+    }
+}
+
+@media(max-width: 967px) {
     body {
-        font-size: 120%;
+        font-size: 120%
     }
-    
+
     header div aside img {
-        width: 50px;
+        width: 50px
     }
-    
+
     header nav ul li a {
         padding: 8px 12px;
         margin: 0 10px;
         font-size: 15px;
         border-radius: 20px;
-        background-color: rgba(255,255,255,0.2);
+        background-color: rgba(255, 255, 255, .2);
         font-weight: bold;
         text-decoration: none;
-        color: white;
+        color: #fff
     }
-    
-   
-    /*BOX MODEL*/
+
     .boxModel {
-        background-color: black;
+        background-color: #000;
         text-align: center;
         vertical-align: middle;
         width: 150px;
         height: 150px;
         cursor: pointer;
-        font-size: 15px;
+        font-size: 15px
     }
 
     div span:hover {
         width: 145px;
-        height: 145px;
+        height: 145px
     }
 
-    footer { 
-        font-size: 20px;
-
+    footer {
+        font-size: 20px
     }
-
 }
-@media (max-width: 799px) {
 
+@media(max-width: 799px) {
     body {
-        font-size: 120%;
+        font-size: 120%
     }
 
     header nav {
-        display: none;
+        display: none
     }
 
     header span {
-        display: block;
+        display: block
     }
 
     .container-area {
-        display: flex;    
+        display: flex
     }
 
     .boxModel {
-        background-color: black;
+        background-color: #000;
         text-align: center;
         vertical-align: middle;
         width: 100px;
         height: 100px;
         cursor: pointer;
-        font-size: 15px;
+        font-size: 12px
     }
 
     div span:hover {
         width: 95px;
-        height: 95px;
+        height: 95px
     }
-    
+
     section span p {
         margin-left: 20px;
-        font-size: 15px;
+        font-size: 15px
     }
-
 }
 
-@media (max-width: 520px) {
-
-    .hero {
-        text-align: center;
-    }
+@media(max-width: 520px) {
     .service-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
-        margin-top: 15px;
-        
+        margin-top: 15px
     }
 
-    section p {
-        margin-top: -90px;
-        font-size: 15px;
+    .info {
+        height: 400px;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+        padding: 0 50px;
+        background-color: silver
     }
 
-    section div h2 {
-        text-align: center;
+    section span p {
+        margin-top: -50px;
+        font-size: 15px
     }
 
     footer p {
-        font-size: 10px;
+        font-size: 10px
+    }
+}
+
+@media(max-width: 490px) {
+    .service {
+        height: 600px
+    }
+}
+
+@media(max-width: 370px) {
+    .service {
+        height: 650px
     }
 
+    .info {
+        height: 500px;
+        align-items: center;
+        text-align: center
+    }
 }
