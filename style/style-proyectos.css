@@ -8,25 +8,22 @@ body {
     font-size: 20px
 }
 
-.btn-contacto {
-    background-color: #000
-}
-
-.btn-quienes {
-    background-color: gray
-}
-
 header nav ul {
-    justify-content: center
-}
+    justify-content: center;
+} 
 
 header nav ul li {
     font-size: 20px;
     padding: 0 8px;
     margin: 0 10px;
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, .2);
-    font-weight: bold
+    border-radius: 15px;    
+    font-weight: bold;
+    border: 2px solid darkcyan;
+}
+
+header nav ul li:hover {
+    transform: scale(0.8);
+    transition: all, 0.5s;
 }
 
 header nav ul li:hover {
@@ -176,19 +173,22 @@ aside {
         font-size: 120%
     }
 
-    header div aside img {
-        width: 50px
-    }
-
-    header nav ul li a {
-        padding: 8px 12px;
+    header nav ul {
+        justify-content: center;
+    } 
+    
+    header nav ul li {
+        font-size: 20px;
+        padding: 0 8px;
         margin: 0 10px;
-        font-size: 15px;
-        border-radius: 20px;
-        background-color: rgba(255, 255, 255, .2);
+        border-radius: 15px;    
         font-weight: bold;
-        text-decoration: none;
-        color: #fff
+        border: 2px solid darkcyan;
+    }
+    
+    header nav ul li:hover {
+        transform: scale(0.8);
+        transition: all, 0.5s;
     }
 
     .hero__buttom {

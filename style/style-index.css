@@ -17,8 +17,8 @@ header nav ul li {
     padding: 0 8px;
     margin: 0 10px;
     border-radius: 15px;    
-    background-color: rgba(255,255,255,0.2);
     font-weight: bold;
+    border: 2px solid darkcyan;
 }
 
 header nav ul li:hover {
