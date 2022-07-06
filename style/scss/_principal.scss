@@ -1,5 +1,5 @@
 .hero { 
-    background-image: url('../img/5065282.jpg');
+    background-image: url('/img/5065282.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -38,6 +38,20 @@
                     }
                 }
             }
+}
+
+// ACÁ UTILIZAMOS MAP-GET PARA MODIFICAR EL TITULO //
+
+$estilos: (
+    alto: 300px,
+    color: white,
+    display: flex,
+);
+
+.hero {
+    color: map-get($estilos, color);
+    height: map-get($estilos, alto);
+    display: map-get($estilos, display);
 }
 
 

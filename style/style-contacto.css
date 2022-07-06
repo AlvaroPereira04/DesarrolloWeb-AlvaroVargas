@@ -102,7 +102,7 @@ aside {
 }
 
 .contacto {
-    height: 200px;
+    height: 100px;
     color: #000;
     background-color: silver;
     display: flex;
@@ -113,15 +113,15 @@ aside {
 }
 
 .contacto-grid__text {
-    text-align: center
+    text-align: center;
 }
 
 .contacto2 {
     height: 450px;
-    color: #fff;
     display: grid;
-    padding: 0 30px;
-    background-color: #166279
+    color: #fff;
+    padding: 0 50px;
+    background-color: #166279;
 }
 
 .contacto2-grid {
@@ -129,7 +129,8 @@ aside {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
     justify-items: center;
-    margin-top: 30px
+    margin-top: 30px;
+    
 }
 
 .contacto2-grid__flex {

@@ -20,7 +20,7 @@
 }
 
 .hero {
-  background-image: url("../img/5065282.jpg");
+  background-image: url("/img/5065282.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -55,6 +55,12 @@
 }
 .hero .hero__buttom .hero__buttom--pointer:hover {
   background: darkcyan;
+}
+
+.hero {
+  color: white;
+  height: 300px;
+  display: flex;
 }
 
 .service {
@@ -166,7 +172,19 @@ div article:hover {
   background-color: darkcyan;
 }
 
-footer {
+.info {
+  height: 300px;
+  color: black;
+  display: grid;
+  /* grid-template-areas: "boton texto texto";*/
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  padding: 0 30px;
+  background-color: silver;
+}
+
+.footer {
   font-size: 80%;
   color: white;
   background-color: black;
@@ -176,11 +194,11 @@ footer {
   align-items: center;
   padding: 0 50px;
 }
-footer .footer img {
+.footer .footer img {
   margin-top: -20px;
   margin-bottom: -40px;
 }
-footer .footer img footer div p a {
+.footer .footer img footer div p a {
   text-decoration: none;
-  color: rgb(22, 98, 121);
+  color: #166279;
 }/*# sourceMappingURL=estilos.css.map */
