@@ -57,12 +57,6 @@
   background: darkcyan;
 }
 
-.hero {
-  color: white;
-  height: 300px;
-  display: flex;
-}
-
 .service {
   height: 350px;
   color: white;
@@ -170,18 +164,6 @@ div article:hover {
 }
 .hero__buttom--pointer:hover {
   background-color: darkcyan;
-}
-
-.info {
-  height: 300px;
-  color: black;
-  display: grid;
-  /* grid-template-areas: "boton texto texto";*/
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  align-items: center;
-  padding: 0 30px;
-  background-color: silver;
 }
 
 .footer {
