@@ -9,8 +9,8 @@ body {
 }
 
 header nav ul {
-    justify-content: center;
-} 
+    justify-content: center
+}
 
 header nav ul li {
     font-size: 20px;
@@ -19,11 +19,6 @@ header nav ul li {
     border-radius: 15px;    
     font-weight: bold;
     border: 2px solid darkcyan;
-}
-
-header nav ul li:hover {
-    transform: scale(0.8);
-    transition: all, 0.5s;
 }
 
 header nav ul li:hover {
@@ -193,22 +188,18 @@ div article:hover {
         font-size: 120%
     }
 
-    header nav ul {
-        justify-content: center;
-    } 
-    
-    header nav ul li {
-        font-size: 20px;
-        padding: 0 8px;
-        margin: 0 10px;
-        border-radius: 15px;    
-        font-weight: bold;
-        border: 2px solid darkcyan;
+    header div aside img {
+        width: 50px
     }
-    
-    header nav ul li:hover {
-        transform: scale(0.8);
-        transition: all, 0.5s;
+
+    header nav ul li a {
+        padding: 8px 12px;
+        margin: 0 10px;
+        font-size: 15px;
+        border-radius: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff
     }
 
     footer {

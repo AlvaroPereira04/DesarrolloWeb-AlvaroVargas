@@ -1,3 +1,8 @@
+@import "./variable";
+@import "./global";
+@import "./header";
+@import "./footer";
+
 * {
     margin: 0;
     padding: 0
@@ -6,18 +11,6 @@
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px
-}
-
-.btn-contacto {
-    background-color: #000
-}
-
-.btn-quienes {
-    background-color: gray
-}
-
-header nav img {
-    width: 100px
 }
 
 header nav ul {
@@ -59,6 +52,14 @@ footer div p a {
     color: #166279
 }
 
+.lista1 {
+    font-size: 20px;
+    padding: 0 8px;
+    margin: 0 10px;
+    border-radius: 15px;
+    font-weight: bold
+}
+
 .container-area {
     display: grid;
     gap: 15px;
@@ -87,8 +88,7 @@ aside {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 50px;
-    text-align: center
+    padding: 0 50px
 }
 
 .hero__buttom {
@@ -96,7 +96,8 @@ aside {
     text-align: center;
     justify-content: center;
     justify-items: center;
-    margin-top: 15px
+    margin-top: 15px;
+    font-size: 18px
 }
 
 .hero__buttom--pointer {
@@ -106,6 +107,38 @@ aside {
     font-weight: bold;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background-color: #000
+}
+
+.mision {
+    height: 350px;
+    color: #fff;
+    display: grid;
+    padding: 0 50px;
+    background-color: #166279
+}
+
+div article h3 {
+    margin-top: 30px;
+    text-align: center
+}
+
+div article p {
+    display: grid;
+    font-size: 16px;
+    margin: 50px 20px;
+    justify-items: center
+}
+
+.mision-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    margin-top: 15px
+}
+
+.mision-grid__text {
+    font-size: 16px;
+    margin: 0 40px
 }
 
 .contacto {
@@ -123,39 +156,16 @@ aside {
     text-align: center
 }
 
-.contacto2 {
-    height: 300px;
-    color: #fff;
-    display: grid;
-    padding: 0 50px;
-    background-color: #166279
+@media(max-width: 1180px) {
+    .lista1 {
+        font-size: 15px;
+        text-align: center
+    }
 }
 
-.contacto2-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    justify-items: center;
-    margin-top: 30px
-
-}
-
-.contacto2-grid__flex {
-    margin: 5px;
-    display: block;
-    border-radius: 8px;
-}
-
-section form div input {
-    font-family: sans-serif;
-    font-size: 20px;
-    
-}
-
-section form div select {
-    margin: 0 20px;
-    font-family: sans-serif;
-    font-size: 14px
+div article:hover {
+    background-image: linear-gradient(to top, #166279, black, #166279);
+    transition: all, 2s
 }
 
 @media(max-width: 1048px) {
@@ -172,7 +182,13 @@ section form div select {
     }
 }
 
-@media(max-width: 978px) {
+@media(max-width: 991px) {
+    .mision {
+        height: 700px
+    }
+}
+
+@media(max-width: 967px) {
     body {
         font-size: 120%
     }
@@ -192,8 +208,7 @@ section form div select {
     }
 
     footer {
-        font-size: 20px;
-        text-align: center
+        font-size: 20px
     }
 }
 
@@ -214,24 +229,46 @@ section form div select {
         display: flex
     }
 
-    .contacto2 {
-        font-size: 16px
+    .mision {
+        height: 800px
     }
 }
 
-@media(max-width: 530px) {
-    .contacto2 {
-        height: 600px;
-        
+@media(max-width: 600px) {
+    .hero {
+        text-align: center
     }
 
-    .contacto2-grid {
+    .mision {
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(12, 1fr);
-        width: auto;
+        height: 850px
     }
 
     footer p {
         font-size: 10px
+    }
+}
+
+@media(max-width: 505px) {
+    section div p {
+        font-size: 15px
+    }
+
+    .mision {
+        height: 1000px
+    }
+
+    section div span {
+        font-size: 10px
+    }
+
+    footer p {
+        font-size: 10px
+    }
+}
+
+@media(max-width: 400px) {
+    .mision {
+        height: 1300px
     }
 }

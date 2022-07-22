@@ -1,3 +1,8 @@
+@import "./variable";
+@import "./global";
+@import "./header";
+@import "./footer";
+
 * {
     margin: 0;
     padding: 0
@@ -8,12 +13,8 @@ body {
     font-size: 20px
 }
 
-.btn-contacto {
-    background-color: #000
-}
-
-.btn-quienes {
-    background-color: gray
+header nav img {
+    width: 100px
 }
 
 header nav ul {
@@ -72,18 +73,18 @@ aside {
     grid-area: logo
 }
 
-.hero {
-    background-image: url("../img/5065282.jpg");
+.hero { 
+    background-image: url('../img/5065282.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 300px;
-    color: #fff;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 50px
+    padding: 0 50px;
 }
 
 .hero__buttom {
@@ -92,23 +93,38 @@ aside {
     justify-content: center;
     justify-items: center;
     margin-top: 15px;
-    font-size: 18px
+    font-size: 18px;
+    
+}    
+.hero__buttom--pointer { 
+    color: white;
+    font-size: 15px;
+    font-family: "montserrat";
+    text-decoration: none;
+    margin: 30px 0;
+    border: 2px solid darkcyan;
+    padding: 14px 60px;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+.hero__buttom--pointer:hover {
+    background: darkcyan;        
 }
 
 .hero__buttom--pointer {
     padding: 10px 50px;
     cursor: pointer;
-    color: #fff;
+    color: white;
     font-weight: bold;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #000
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:black;
 }
 
 .service {
     height: 350px;
     color: #fff;
     display: grid;
-    padding: 30px 50px;
+    padding: 0 50px;
     background-color: #166279
 }
 
@@ -194,30 +210,6 @@ div article:hover {
     justify-items: center;
     margin-top: 15px;
     font-size: 18px
-}
-
-.hero__buttom--pointer {
-    padding: 10px 50px;
-    cursor: pointer;
-    color: #fff;
-    font-weight: bold;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #000
-}
-
-.contacto {
-    height: 200px;
-    color: #000;
-    background-color: silver;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 50px
-}
-
-.contacto-grid__text {
-    text-align: center
 }
 
 @keyframes move {
@@ -345,20 +337,16 @@ div article:hover {
     }
 }
 
-@media(max-width: 490px) {
-    .service {
-        height: 600px
-    }
-}
-
 @media(max-width: 370px) {
-    .service {
-        height: 650px
+    .info {
+        height: 500px
     }
 
-    .info {
-        height: 500px;
-        align-items: center;
-        text-align: center
+    .info div h3 {
+        margin-right: 50px
+    }
+
+    .info span p {
+        margin-right: 50px
     }
 }
